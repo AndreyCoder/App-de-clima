@@ -3,7 +3,8 @@ import './App.css';
 import Cards from './components/cards/Cards.js';
 import SearchBar from './components/searchbar/SearchBar.js';
 
-const API_KEY = process.env.REACT_APP_API_KEY
+const { REACT_APP_API_KEY } = process.env
+console.log(REACT_APP_API_KEY)
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -24,7 +25,7 @@ function App() {
 
   function onSearch(ciudad) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${REACT_APP_API_KEY}&units=metric`
     )
       .then((r) => r.json())
       .then((recurso) => {

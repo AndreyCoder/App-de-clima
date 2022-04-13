@@ -7,7 +7,7 @@ import icon_09d from '../../assets/09d.png';
 import icon_03n from '../../assets/03n.png';
 
 export default function Card({ max, min, name, img, onClose }) {
-  // acá va tu código
+
   function handleOnClose() {
     if (typeof onClose === "function") onClose();
   }
