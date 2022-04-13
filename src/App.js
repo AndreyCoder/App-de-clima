@@ -4,7 +4,6 @@ import Cards from './components/cards/Cards.js';
 import SearchBar from './components/searchbar/SearchBar.js';
 
 const { REACT_APP_API_KEY } = process.env
-console.log(REACT_APP_API_KEY)
 
 function App() {
   const [cities, setCities] = useState([]);
